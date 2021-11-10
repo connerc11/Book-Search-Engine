@@ -42,10 +42,10 @@ Mutation: {
     },
     saveBook: async (parent, args, context) => {
         if (context.user) {
-          const updatedThought = await Thought.findOneAndUpdate(
-            { _id: thoughtId },
+          const updatedUser = await User.findOneAndUpdate(
+            { _id: context.user._id },
             { $addToSet: { savedBooks: { bookId: args.bookId } } },
-            { new: true, runValidators: true }
+            { new: true }
           );
   
           return updatedThought;
