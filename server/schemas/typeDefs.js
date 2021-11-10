@@ -10,7 +10,6 @@ type Book {
     title: String
     image: String
     link: String
-
 }
 
 type User {
@@ -26,16 +25,16 @@ type Query {
 }
 
 type Mutation {
-    login:(email, String!, password: String!): Auth
-    addUser:(username: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
     saveBook(input: bookSave!): User
-    removeBook: (bookId: Id!): User
+    removeBook(bookId: Id!): User
 }
 
 type Auth {
     token: Id!
     user: User
-}`;
+}`
 
 
 
@@ -43,4 +42,4 @@ type Auth {
 
 
 
-module.exports = typeDefs
+module.exports = typeDefs;

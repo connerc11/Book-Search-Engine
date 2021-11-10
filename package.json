@@ -5,7 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "apollo-server-express": "^2.25.3",
-    "graphql": "^16.0.1"
+    "graphql": "^16.0.1",
+    "mongodb": "^4.1.4",
+    "mongoose": "^6.0.12"
   },
   "devDependencies": {},
   "scripts": {

@@ -71,4 +71,4 @@ Mutation: {
 
 }
 
-module.exports = resolvers
+module.exports = resolvers;
