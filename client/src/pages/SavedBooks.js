@@ -28,9 +28,9 @@ const SavedBooks = () => {
     }
 
     try {
-       await removeBook({variables: {bookId}});
+       const response = await removeBook({variables: {bookId}});
 
-       if (error) {
+       if (!response) {
          throw new Error('This did not work! Oops!')
        }
        removeBookId(bookId);
@@ -44,7 +44,7 @@ const SavedBooks = () => {
       // // upon success, remove book's id from localStorage
      
     } catch (err) {
-      console.error(err);
+      console.error(error);
     }
     
   };
